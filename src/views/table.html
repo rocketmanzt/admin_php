@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<table border="1">
+  <tr class="myclass">
+    <th>Month</th>
+    <th>Savings</th>
+  <th><input id="sub" type="submit" ></input></th>
+  </tr>
+  <tr class="myclass">
+    <td>January</td>
+    <td>$100</td>
+    <th><input id="sub" type="submit" ></input></th>
+  </tr>
+</table>	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(".myclass").each(function(){
+        $("#sub",this).click(function(){
+            //  alert(1)
+          alert($(this).parents("tr").html());
+                  });
+              });
+    });
+</script>
